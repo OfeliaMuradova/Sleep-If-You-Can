@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/tvAlarmTime"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="09:00"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:textSize="@dimen/alarm_time_size"
+
+        android:layout_marginTop="@dimen/margin_app"
+        android:layout_marginLeft="@dimen/margin_app"/>
+
+    <Switch
+        android:id="@+id/switchEnableAlarm"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@+id/tvAlarmTime"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlarmTime"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_margin="@dimen/margin_app"/>
+
+    <TextView
+        android:id="@+id/tvAlarmLabel"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Some Label"
+
+        app:layout_constraintTop_toBottomOf="@id/tvAlarmTime"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:textSize="@dimen/alarm_label_size"
+
+        android:layout_marginLeft="@dimen/margin_app"
+        android:layout_marginTop="@dimen/margin_app_secondary"/>
+
+    <View
+        android:id="@+id/viewAlarmSmallDivider"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alarm_divider_height"
+
+        android:background="@color/somecolor"
+
+        app:layout_constraintTop_toBottomOf="@id/tvAlarmLabel"
+
+        android:layout_marginTop="@dimen/margin_app_secondary"/>
+
+
+    <Button
+        android:id="@+id/btnSettingsAlarm"
+
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="10dp"
+
+        android:onClick="test"
+
+        android:text="Settings"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/viewAlarmSmallDivider"
+        app:layout_constraintBottom_toTopOf="@id/viewAlarmDivider"/>
+
+<ImageButton
+    android:id="@+id/btnDeleteAlarm"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="?android:attr/borderlessButtonStyle"
+
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/viewAlarmSmallDivider"
+    android:src="@drawable/baseline_delete_black_18dp"/>
+
+
+    <View
+        android:id="@+id/viewAlarmDivider"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alarm_divider_height"
+
+        android:background="@android:color/darker_gray"
+
+        app:layout_constraintTop_toBottomOf="@id/btnDeleteAlarm"/>
+
+</android.support.constraint.ConstraintLayout>

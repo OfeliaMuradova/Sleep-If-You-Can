@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="alarm_time_size">50sp</dimen>
+    <dimen name="margin_app">20dp</dimen>
+    <dimen name="margin_app_secondary">10dp</dimen>
+    <dimen name="alarm_divider_height">1dp</dimen>
+    <dimen name="alarm_label_size">20sp</dimen>
+</resources>

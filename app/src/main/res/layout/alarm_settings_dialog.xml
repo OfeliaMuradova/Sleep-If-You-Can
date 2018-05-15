@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvAlarmSettingsTime"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="09:00"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"/>
+
+
+
+
+    <View
+        android:id="@+id/viewAlarmSettingsDivider"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alarm_divider_height"
+
+        android:background="@android:color/darker_gray"
+
+        app:layout_constraintTop_toBottomOf="@id/tvAlarmSettingsTime"/>
+
+    <EditText
+        android:id="@+id/etAlarmSettingsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test Alarm Label 1"
+        android:layout_marginTop="@dimen/margin_app"
+
+        android:maxLines="1"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/glAlarmSettingsLeft"
+        app:layout_constraintRight_toRightOf="@id/glAlarmSettingsRight"
+
+        app:layout_constraintTop_toBottomOf="@id/tvAlarmSettingsTime"/>
+
+    <EditText
+        android:id="@+id/etAlarmSettingsBarcodeLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Milk Package"
+
+        android:layout_marginTop="@dimen/margin_app"
+        android:textSize="20sp"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="@id/glAlarmSettingsLeft"
+        app:layout_constraintRight_toRightOf="@id/glAlarmSettingsRight"
+
+        app:layout_constraintTop_toBottomOf="@id/etAlarmSettingsLabel"
+        android:visibility="gone"/>
+
+    <CheckBox
+        android:id="@+id/cbAlarmSettingsBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BARCODE ALARM"
+        app:layout_constraintTop_toBottomOf="@id/etAlarmSettingsBarcodeLabel"
+        app:layout_constraintLeft_toLeftOf="@id/glAlarmSettingsLeft"
+        android:layout_marginTop="@dimen/margin_app"/>
+
+    <Button
+        android:id="@+id/btnSettingsAlarmSave"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+
+        style="?android:attr/borderlessButtonStyle"
+
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/cbAlarmSettingsBarcode"
+        android:layout_marginTop="@dimen/margin_app"
+
+        android:text="Save"/>
+
+    <Button
+        android:id="@+id/btnSettingsAlarmCancel"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintRight_toLeftOf="@id/btnSettingsAlarmSave"
+
+        style="?android:attr/borderlessButtonStyle"
+
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/cbAlarmSettingsBarcode"
+        android:layout_marginTop="@dimen/margin_app"
+
+        android:text="Cancel"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/glAlarmSettingsLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/glAlarmSettingsRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+
+
+</android.support.constraint.ConstraintLayout>
